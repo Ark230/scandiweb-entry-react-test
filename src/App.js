@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Navbar from './components/navbar/navbar.component';
+import './index.scss';
 
 class App extends Component {
 
-  constructor() {
-    super();
-  }
 
   render() {
-    return <h1> Hello world React!</h1>;
+    return (<Fragment>
+      <Navbar />
+
+    </Fragment>)
   };
 }
 

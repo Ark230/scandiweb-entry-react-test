@@ -1,0 +1,29 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    
+    .header-list{
+        list-style: none;
+        display: inline-flex;
+        
+        &--product-type{
+            justify-content: flex-start;
+        }
+
+        &--cart{
+            justify-content: flex-end;
+        }
+        .header__item{
+            font-weight: 400;
+            font-size: 1.8rem;
+            margin-right: 2.5rem;
+            letter-spacing: 2px;    
+            cursor: pointer;
+        }
+        .active{
+            color: #5ECE7B; 
+            text-decoration: underline .4rem;
+            text-underline-offset: 3rem;   
+        }
+    }
+}
