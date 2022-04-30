@@ -1,0 +1,85 @@
+.category{
+    
+    .category__header{
+        font-size: 3rem;
+        margin: 8rem 0 8rem 0;
+    }
+
+    .category__products{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+       
+        .category__product-container{
+            margin-bottom: 10rem;
+            transition: all .2s;
+            position: relative;
+            &:hover{
+                box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+                padding: 1.5rem;
+                margin-bottom: 6rem;
+                //first grid column
+                &:nth-of-type(3n-2){
+                    transform: translate(-15px, -50px);
+                }
+
+                //second grid column
+                &:nth-of-type(3n-1){
+                    transform: translate(0px, -50px);
+                }
+                //third grid column
+                &:nth-of-type(3n){
+                    transform: translate(15px, -50px);
+               }
+
+               .category__cart-icon{
+                    display: block;
+               }
+            }
+
+            .category__product-image{
+                cursor: pointer;
+            }
+
+
+            .category__out-of-stock{
+                position: relative;
+                &:after{
+                    content: 'OUT OF STOCK';
+                    display: block;
+                    font-size: 2.6rem;
+                    top: 40%;
+                    left: 23%;
+                    color: gray;
+                    position: absolute;
+                    border: .1px solid black;
+                    padding: 1rem;
+                }
+                .category__product-image--out-of-stock{
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+            }
+
+            .category__product-name{
+                cursor: pointer;
+                width: fit-content;
+                font-size: 1.6rem;
+                margin-top: 3.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .category__product-cost{
+                font-size: 1.6rem;
+            }
+
+            .category__cart-icon{
+                display: none;
+                position: fixed;
+                transform: translate(27rem, -13rem);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
